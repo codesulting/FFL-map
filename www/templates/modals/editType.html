@@ -1,0 +1,12 @@
+<div class="list">
+<label class="item item-input item-select">
+  <div class="input-label">
+    Type
+  </div>
+  <select ng-model='tempData.type.category' ng-options='category.category for category in type'>
+  </select>
+  <select ng-model='tempData.type.subcategory' ng-options='category.subcategory for category in type | filter:{$:tempData.type.category} '>>
+  </select>
+</label>
+
+</div>

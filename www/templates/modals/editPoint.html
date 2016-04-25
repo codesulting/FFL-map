@@ -1,0 +1,42 @@
+          <label class="item item-input" ng-if="editOption=='description'||editOption=='name'">
+            <input ng-if="editOption!='description'" type="text" ng-model="tempData[editOption]">
+            <textarea ng-if="editOption=='description'" rows="12" ng-model="tempData[editOption]"></textarea>
+          </label>
+
+          <div ng-if="editOption=='products'">
+            <ion-list>
+              <ion-checkbox class="checkbox-balanced" ng-repeat="product in tempData.products" ng-model="tempData.products[$index].value">{{product.name}}</ion-checkbox>
+            </ion-list>
+          </div>
+
+          <div ng-if="editOption=='opening'">
+            <div class="item item-divider">From</div>
+            <div class="item picker-input">
+                <input type="date" ng-model="" ng-change="" class="date close-right" />
+                <input type="time" step="15" ng-model="" class="time" />
+            </div>
+            <div class="item item-divider">to</div>
+            <div class="item picker-input">
+                <input type="date" ng-model="" ng-change="" class="date close-right" />
+                <input type="time" step="15" ng-model="" ng-change="" class="time" />
+            </div>
+          </div>
+
+          <div ng-if="editOption=='type'">
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Category
+            </div>
+            <select ng-model='tempData.type.category' ng-change='findSub()'>
+              <option value="{{cat.category}}" ng-repeat="cat in categories" ng-selected="{{tempData.type.category==cat.category}}">{{cat.category}}</option>
+            </select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Sub
+            </div>
+          <select ng-model='tempData.type.subcategory'>
+            <option value="{{cat}}" ng-repeat="cat in tempSub" ng-selected="{{tempData.type.subcategory==cat}}">{{cat}}</option>
+          </select>
+          </label>
+          </div>

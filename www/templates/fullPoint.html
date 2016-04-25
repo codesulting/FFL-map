@@ -1,0 +1,66 @@
+<ion-view>
+
+  <ion-content data-tap-disabled="true" class="padding">
+    <div class="row" ng-click="editField('type')">
+      <div class="col" on-hold="">
+        <h2 class="up-title" >
+          {{pointData.type.subcategory}}
+        </h2>
+      </div>
+      <div class="col text-right">
+      </div>
+    </div>
+    <div class="row" ng-click="editField('name')">
+      <div class="col">
+        <h1 class="firstCapital">{{pointData.name}}</h1>
+      </div>
+      <div class="col text-right">
+        <p>
+          Save <span class="icon ion-heart red"></span>
+        </p>
+        <p>
+          Report <span class="icon ion-alert red"></span>
+        </p>
+      </div>
+    </div>
+    <div class="row" on-hold="" ng-repeat="season in pointData.openingHoursSpecification">
+      <div class="col">
+        <p class="allcaps">
+          From {{season.validFrom | monthName}} to {{season.validThrough | monthName}}
+        </p>
+        <p ng-repeat="time in season.datetime" class="capital">
+          {{returnDays(time)}} - <span ng-repeat="op in time.timings">{{$first ? '' : $last ? ' and ' : ''}} {{op.opens}} to {{op.closes}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="row" ng-click="editField('products')">
+      <div ng-repeat="product in pointData.products | filter : productsFilter" class="col">
+        <h3>{{product.name}}</h3>
+      </div>
+    </div>
+    <div class="row" ng-click="editField('description')">
+      <div class="col">
+        <p class="padding-vertical firstCapital">
+          {{pointData.description}}
+        </p>
+      </div>
+    </div>
+    <div class="row" on-hold="">
+      <div class="col">
+          <h2>Phone</h2>
+      </div>
+      <div class="col">
+          <p class="text-right">{{pointData.phone}}</p>
+      </div>
+
+    </div>
+    <div class="row" on-hold="">
+      <div class="col">
+          <h2>website</h2>
+      </div>
+      <div class="col">
+          <p class="text-right">{{pointData.website}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

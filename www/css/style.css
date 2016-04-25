@@ -1,0 +1,150 @@
+/* Empty. Add your own CSS if you like */
+body {
+  height: auto;
+  min-height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+
+#mainMap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.dataModal {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+  transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+  position: absolute;
+  bottom: 49px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  max-width: 500px;
+  margin: auto; }
+
+.active {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.bar.bar-transparent{
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: none;
+}
+
+.has-header-transparent {
+  top:0px;
+}
+
+.dark-bg{
+  background-color: #444;
+}
+
+.item-dark{
+  background-color: #444;
+  color: white;
+}
+
+.up-title{
+  color: #8CC44E;
+}
+
+h1{
+text-transform: capitalize;
+font-family: Helvetica-bold;
+font-size: 24px;
+color: #4A4A4A;
+letter-spacing: 0.6px;
+line-height: 22px;
+}
+
+h2, h3{
+text-transform: uppercase;
+font-family: Helvetica-Bold;
+font-size: 12px !important;
+color: #4A4A4A;
+letter-spacing: 1.75px;
+line-height: 20px;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+p{
+font-family: Helvetica-Light;
+font-size: 12px;
+color: #4A4A4A;
+letter-spacing: 0.6px;
+line-height: 22px;
+}
+
+body{
+  font-family: Helvetica-Light;
+}
+
+.firstCapital:first-letter{
+  text-transform: capitalize;
+}
+
+.capital{
+  text-transform: capitalize;
+}
+
+.allcaps{
+  font-family: Helvetica-Bold;
+}
+
+.button{
+font-family: Helvetica-Bold;
+font-size: 12px;
+letter-spacing: 1.75px;
+line-height: 14px;
+text-transform: uppercase;
+}
+
+.button-dark{
+  color: #FFFFFF;
+}
+
+.bar .button-full{
+  margin: 0px;
+}
+
+.popup-container .popup{
+  width:90%;
+  border-radius: 10px !important;
+  background-color: white !important;
+}
+
+.popup .popup-head{
+  text-transform: uppercase;
+  border: none;
+}
+
+.popup-head h3{
+  color: #8CC44E !important;
+  padding-top: 15px;
+}
+
+.searchbox{
+  padding: 20px;
+}
+
+input{
+  font-size: 12px !important;
+}
+
+.item{
+  border: none;
+}
+
+.red{
+  color: #FF6F6F;
+}

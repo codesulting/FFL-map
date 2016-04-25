@@ -1,0 +1,5 @@
+<div class="row">
+  <div ng-repeat="product in tempData.products" class="col">
+    <div class="{{returnClass(product.name)}} products-button" ng-click="toggleProduct(product.name)"></div>
+  </div>
+</div>
